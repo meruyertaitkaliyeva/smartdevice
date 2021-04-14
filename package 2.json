@@ -1,0 +1,19 @@
+{
+  "name": "smartdevice",
+  "version": "1.0.0",
+  "description": "Проект Smart Device от Акселлератора",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run editorconfig && npm run stylelint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meruyertaitkaliyeva/smartdevice.git"
+  },
+  "author": "Меруерт Черкасова",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meruyertaitkaliyeva/smartdevice/issues"
+  },
+  "homepage": "https://github.com/meruyertaitkaliyeva/smartdevice#readme"
+}
