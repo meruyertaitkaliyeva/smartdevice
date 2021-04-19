@@ -1,0 +1,60 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1332px;
+  width: 69%;
+  margin: 0 auto;
+  padding: 0 0 96px;
+}
+
+.about img {
+  height: 317px;
+  width: 179px;
+}
+
+.about__wrapper {
+  max-width: 984px;
+  width: 74%;
+  margin-bottom: 15px;
+  color: $basic-dark;
+}
+.about__wrapper h2 {
+  @include heading-style;
+  margin: 0 0 18px;
+}
+
+.about__wrapper p {
+  font-size: 16px;
+  line-height: 21.5px;
+}
+
+.about__button {
+  width: 180px;
+  height: 45px;
+  color: $special-blue;
+  border: 1px solid $special-blue;
+  background-color: transparent;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .about {
+    width: 100%;
+    padding: 0 0 75px;
+  }
+
+  .about img {
+    display: none;
+  }
+
+  .about__wrapper {
+    max-width: 532px;
+    width: 76%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .about {
+    padding: 0 0 65px;
+  }
+}

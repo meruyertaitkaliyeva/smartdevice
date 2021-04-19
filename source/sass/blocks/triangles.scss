@@ -1,0 +1,62 @@
+.triangles {
+  display: flex;
+  position: relative;
+  width: 705px;
+  height: 515px;
+}
+
+.triangles svg {
+  fill: none;
+}
+
+.triangles__little svg{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 373px;
+  height: 373px;
+}
+
+.triangles__big svg {
+  position: absolute;
+  bottom: -20px;
+  left: 41px;
+  width: 636px;
+  height: 636px;
+}
+
+.background {
+  position: relative;
+}
+
+.background__triangle {
+  position: absolute;
+}
+
+.background__triangle svg {
+  fill: none;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .triangles__little svg{
+    width: 294px;
+    height: 294px;
+  }
+
+  .triangles__big svg {
+    width: 502px;
+    height: 502px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .triangles__little svg{
+    width: 281px;
+    height: 281px;
+  }
+
+  .triangles__big svg {
+    width: 479px;
+    height: 479px;
+  }
+}

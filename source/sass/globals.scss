@@ -29,24 +29,7 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
   box-sizing: border-box;
   font-family: $heading-font-family;
+  font-weight: 700;
   color: $basic-white;
-}
-
-.triangles {
-  display: flex;
-  position: relative;
-  width: 705px;
-  height: 515px;
-}
-
-.triangles__little {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.triangles__big {
-  position: absolute;
-  bottom: 0;
-  left: 41px;
+  text-transform: uppercase;
 }

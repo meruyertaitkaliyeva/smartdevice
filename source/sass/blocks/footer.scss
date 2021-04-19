@@ -3,13 +3,19 @@
   flex-direction: column;
   position: relative;
   width: 100%;
-  padding: 65px 0 14px;
+  padding: 65px 0 0;
   background-color: $light-grey;
+}
+
+.footer__copyright {
+  position: relative;
+  width: 100%;
+  padding: 14px 0;
 
   &::after {
     position: absolute;
     content: "";
-    bottom: 52px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -21,10 +27,22 @@
 
 .footer__wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1412px;
   width: 73.5%;
   margin: 0 auto;
+  padding-bottom: 55px;
+}
+
+.footer__folder {
+  &--logo {
+    margin-right: 11%;
+  }
+
+  &--nav {
+    margin-right: 7%;
+  }
 }
 
 .footer__logo {
@@ -44,12 +62,12 @@
 }
 
 .footer__folder h3 {
+  @include heading-style;
   margin: 0 0 29px;
   font-size: 15px;
   line-height: 16px;
   color: $dark-grey;
   text-transform: uppercase;
-  @include heading-style;
 }
 
 .footer__buttons {
@@ -73,6 +91,7 @@
 }
 
 .footer__nav-item a,
+.footer__contacts-item,
 .footer__contacts-item a {
   font-size: 15px;
   line-height: 15px;
@@ -99,21 +118,16 @@
 
 @media (max-width: $tablet-breakpoint) {
   .footer {
-    padding: 19px 0 24px;
-    &::before {
-      position: absolute;
-      content: "";
-      top: 97px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 1px;
-      background-color: #626962;
-    }
+    padding: 19px 0 0;
+    overflow-x: hidden;
+  }
 
-    &::after {
-      bottom: -69px;
-    }
+  .footer__copyright {
+    padding: 21px 0 24px;
+  }
+
+  .footer__wrapper {
+    padding-bottom: 33px;
   }
 
   .footer__wrapper,
@@ -122,20 +136,36 @@
   }
 
   .footer__folder {
+    position: relative;
+
     &--logo {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       width: 100%;
+      padding-bottom: 26px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150%;
+        height: 1px;
+        background-color: #626962;
+        opacity: 0.2;
+      }
     }
 
     &--nav,
     &--contacts {
-      width: 50%;
+      padding-top: 38px;
     }
+  }
 
-    &--nav {
-      height: auto;
-    }
+  .footer__nav-list {
+    height: auto;
   }
 
   .footer__nav-item {
@@ -150,23 +180,24 @@
     display: block;
     font-size: 13px;
     line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  .footer__span a {
     color: $dark-grey;
     opacity: 0.5;
-    text-transform: uppercase;
+  }
+
+  .footer__copyright-item {
+    &--hide {
+      display: none;
+    }
   }
 }
 
 @media (max-width: $mobile-breakpoint) {
   .footer {
-    padding: 0;
-
-    &::before {
-      content: none;
-    }
-
-    &::after {
-      bottom: -123px;
-    }
+    padding: 46px 0 0;
   }
 
   .footer__wrapper,
@@ -175,12 +206,31 @@
     width: 90%;
   }
 
+  .footer__copyright-list {
+    text-align: center;
+  }
+
   .footer__folder {
-    position: relative;
+    width: 100%;
 
     &--logo {
-      padding: 46px 0 54px;
+      flex-direction: column;
+      padding-bottom: 54px;
       text-align: center;
+    }
+
+    &--nav {
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 125%;
+        height: 1px;
+        background-color: #626962;
+        opacity: 0.2;
+      }
     }
   }
 
@@ -216,11 +266,37 @@
     margin-bottom: 26px;
   }
 
+  .footer__socials-list {
+    margin: 0 auto;
+  }
+
   .footer__buttons {
     display: block;
     position: absolute;
     top: 29px;
     right: 0;
+  }
+
+  .footer__open,
+  .footer__close {
+    border: none;
+    background-color: transparent;
+  }
+
+  .footer__buttons svg {
+    vertical-align: middle;
+  }
+
+  .footer__folder--closed .footer__close {
+    display: none;
+  }
+
+  .footer__folder--opened .footer__open {
+    display: none;
+  }
+
+  .footer__span {
+    margin-bottom: 31px;
   }
 
   .hide {

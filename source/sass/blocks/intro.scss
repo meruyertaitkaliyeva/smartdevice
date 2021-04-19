@@ -21,6 +21,7 @@
 
 .intro__text {
   width: 718px;
+  margin-right: 70px;
   color: $basic-white;
 }
 
@@ -42,7 +43,7 @@
   &::before {
     position: absolute;
     content: "";
-    top: 0;
+    top: 15px;
     left: 0;
     width: 66px;
     height: 2px;
@@ -119,6 +120,8 @@
     position: absolute;
     top: 0;
     left: 377px;
+    width: 465px;
+    height: 340px;
   }
 }
 
@@ -128,8 +131,8 @@
   }
 
   .intro__text {
-    width: auto;
-    margin: 196px 15px o;
+    width: 96%;
+    margin: 196px auto 0;
   }
 
   .intro__text h1 {
@@ -144,6 +147,7 @@
 
   .intro__button {
     width: 287px;
+    margin: 0 auto;
   }
 
   .intro__span {
