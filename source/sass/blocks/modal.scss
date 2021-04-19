@@ -1,0 +1,22 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  max-width: 490px;
+  width: 25.5%;
+  margin: auto;
+  padding: 33px 39px 36px;
+  box-sizing: border-box;
+  color: $basic-white;
+  background-color: $special-blue;
+}
+
+.modal__wrapper h2 {
+  @include heading-style;
+  font-size: 28px;
+  height: 39px;
+}
+
+.modal__wrapper p {
+  font-size: 16px;
+  line-height: 21.5px;
+}

@@ -221,7 +221,7 @@
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
           <form method="get">
-            <div class="feedback__input feedback__input--name">
+            <div class="feedback__input feedback__input--name input">
               <label for="name"></label>
               <input type="text" name="name" id="name" placeholder="Имя">
             </div>
@@ -229,11 +229,11 @@
               <label for="tel"></label>
               <input type="tel" name="tel" id="tel" placeholder="Телефон">
             </div>
-            <div class="feedback__message">
+            <div class="feedback__message message">
               <textarea name="message" id="message" placeholder="Ваш вопрос"></textarea>
             </div>
-            <button class="feedback__submit button" type="submit">Задать вопрос</button>
-            <div class="feedback__checkbox">
+            <button class="feedback__submit button submit" type="submit">Задать вопрос</button>
+            <div class="feedback__checkbox checkbox">
               <input class="visually-hidden" type="checkbox" name="consent" id="consent">
               <label for="consent">Я согласен на обработку персональных данных</label>
             </div>
@@ -365,26 +365,33 @@
     </div>
   </footer>
   <section class="modal">
-    <h2>Закажите звонок</h2>
-    <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-    <form method="get">
-      <div class="madal__input">
-        <label for="modal-name"></label>
-        <input type="text" name="modal-name" id="modal-name">
-      </div>
-      <div class="madal__input">
-        <label for="modal-phone"></label>
-        <input type="tel" name="modal-phone" id="modal-phone">
-      </div>
-      <div class="modal__message">
-        <textarea name="modal-message" id="modal-message" cols="30" rows="10"></textarea>
-      </div>
-      <button class="modal__submit" type="submit"></button>
-      <div class="modal__check">
-        <input type="checkbox" name="modal-checkbox" id="modal-checkbox">
-        <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
-      </div>
-    </form>
+    <button class="modal__button" type="button">
+      <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <use xlink:href="img/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="modal__wrapper">
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form method="get">
+        <div class="modal__input input">
+          <label for="modal-name"></label>
+          <input type="text" name="modal-name" id="modal-name">
+        </div>
+        <div class="modal__input input">
+          <label for="modal-phone"></label>
+          <input type="tel" name="modal-phone" id="modal-phone">
+        </div>
+        <div class="modal__message message">
+          <textarea name="modal-message" id="modal-message" cols="30" rows="10"></textarea>
+        </div>
+        <button class="modal__submit button submit" type="submit"></button>
+        <div class="modal__check checkbox">
+          <input type="checkbox" name="modal-checkbox" id="modal-checkbox">
+          <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
   </section>
 </body>
 
