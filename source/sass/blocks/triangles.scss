@@ -9,28 +9,62 @@
   fill: none;
 }
 
-.triangles__little svg{
+.triangles__little svg {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 373px;
-  height: 373px;
+  bottom: 60px;
+  left: 50px;
+  width: 330px;
+  height: 310px;
 }
 
 .triangles__big svg {
   position: absolute;
-  bottom: -20px;
-  left: 41px;
-  width: 636px;
-  height: 636px;
+  bottom: 70px;
+  left: 80px;
+  width: 600px;
+  height: 480px;
 }
 
 .background {
   position: relative;
+  max-width: 1921px;
+  overflow-x: hidden;
 }
 
 .background__triangle {
   position: absolute;
+
+  &--little svg {
+    width: 340px;
+    height: 330px;
+  }
+
+  &--big svg {
+    width: 680px;
+    height: 695px;
+  }
+
+  &--little1 {
+    top: 40px;
+    left: 200px;
+  }
+
+  &--big1 {
+    bottom: -30px;
+    left: -70px;
+  }
+
+  &--little2 {
+    top: 388px;
+    right: 27px;
+    transform: rotate(180deg);
+  }
+
+  &--big2 {
+    bottom: 410px;
+    left: 525px;
+    transform: rotate(180deg);
+  }
 }
 
 .background__triangle svg {
@@ -39,24 +73,31 @@
 
 @media (max-width: $tablet-breakpoint) {
   .triangles__little svg{
-    width: 294px;
-    height: 294px;
+    left: 67px;
+    width: 260px;
+    height: 260px;
   }
 
   .triangles__big svg {
-    width: 502px;
-    height: 502px;
+    bottom: 51px;
+    left: 110px;
+    width: 435px;
+    height: 435px;
   }
 }
 
 @media (max-width: $mobile-breakpoint) {
   .triangles__little svg{
-    width: 281px;
-    height: 281px;
+    bottom: 110px;
+    left: 160px;
+    width: 265px;
+    height: 216px;
   }
 
   .triangles__big svg {
-    width: 479px;
-    height: 479px;
+    bottom: 110px;
+    left: 208px;
+    width: 446px;
+    height: 370px;
   }
 }

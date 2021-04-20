@@ -32,4 +32,17 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   color: $basic-white;
   text-transform: uppercase;
+  transition-property: all;
+  transition-duration: 0.7s;
+
+  &:hover,
+  &:focus {
+    color: $special-blue;
+    background-color: $basic-white;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
 }

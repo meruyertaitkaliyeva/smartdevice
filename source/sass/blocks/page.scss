@@ -12,6 +12,7 @@ body {
   padding: 0;
   font-family: $body-font-family;
   background-color: $basic-white;
+  overflow-x: hidden;
 }
 
 @media (max-width: $tablet-breakpoint) {

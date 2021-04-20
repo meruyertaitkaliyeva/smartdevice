@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-// const webpack = require('webpack-stream');
+const webpack = require('webpack-stream');
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
@@ -15,28 +15,28 @@ const sync = require("browser-sync").create();
 
 // //Webpack
 
-// const vendor = () => {
-//   return gulp.src('./source/js/vendor.js')
-//     .pipe(webpack({
-//       entry: {
-//         imask: './source/js/vendor/imask.js',
-//       },
-//       output: {
-//         filename: 'vendor.js',
-//       },
-//     }))
-//     .pipe(gulp.dest('build/js'));
-// }
+const vendor = () => {
+  return gulp.src('./source/js/vendor.js')
+    .pipe(webpack({
+      entry: {
+        imask: './source/js/vendor/imask.js',
+      },
+      output: {
+        filename: 'vendor.js',
+      },
+    }))
+    .pipe(gulp.dest('build/js'));
+}
 
-// exports.vendor = vendor;
+exports.vendor = vendor;
 
-// const script = () => {
-//   return gulp.src('./source/js/script.js')
-//     .pipe(webpack( require('./webpack.config.js') ))
-//     .pipe(gulp.dest('build/js'));
-// }
+const script = () => {
+  return gulp.src('./source/js/script.js')
+    .pipe(webpack( require('./webpack.config.js') ))
+    .pipe(gulp.dest('build/js'));
+}
 
-// exports.script = script;
+exports.script = script;
 
 // Styles
 
@@ -98,7 +98,7 @@ const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    // "source/js/*.js"
+    "source/js/*.js"
   ], {
     base: "source"
   })
@@ -129,8 +129,8 @@ exports.html = html;
 const build = gulp.series(
   clean,
   copy,
-  // vendor,
-  // script,
+  vendor,
+  script,
   styles,
   sprite,
   html

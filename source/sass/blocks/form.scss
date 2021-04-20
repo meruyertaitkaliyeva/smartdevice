@@ -1,13 +1,4 @@
-.input input {
-  box-sizing: border-box;
-  border: none;
-  background-color: rgba(255,255,255,0.1);
-  color: $basic-white;
-  font-family: $body-font-family;
-  font-size: 16px;
-  line-height: 21.5px;
-}
-
+.input input,
 .message textarea {
   box-sizing: border-box;
   border: none;
@@ -23,6 +14,13 @@
   &::placeholder {
     color: $basic-white;
   }
+
+  &:focus,
+  &:active {
+    outline-color: $basic-white;
+    background-color: $basic-white;
+    color: $basic-dark;
+  }
 }
 
 .submit {
@@ -32,6 +30,8 @@
 }
 
 .checkbox label {
+  display: inline-block;
+  position: relative;
   font-size: 14px;
   line-height: 16px;
   box-sizing: border-box;
@@ -50,10 +50,19 @@
 }
 
 .checkbox input {
-  &:checked + .checkbox label::before {
+  &:checked + label::before {
     background-image: url("../img/check.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 7.5px 4.5px;
   }
+}
+
+.error {
+  display: block;
+  margin: -15px 0 0;
+  font-size: 12px;
+  line-height: 12px;
+  color: #ff5b40;
+  letter-spacing: 1px;
 }

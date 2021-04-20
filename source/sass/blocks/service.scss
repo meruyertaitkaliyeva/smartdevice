@@ -3,14 +3,14 @@
   flex-direction: column;
   width: 100%;
   min-height: 938px;
-  padding: 93px 0 127px;
+  padding: 93px 0 90px;
   background-color: $dark-grey;
   box-sizing: border-box;
 }
 
 .service__wrapper {
   max-width: 1170px;
-  width: 61%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -30,14 +30,49 @@
 
 .service__item {
   position: relative;
-  max-width: 370px;
-  width: 24%;
+  // max-width: 370px;
+  width: 31.62%;
   min-height: 620px;
+  margin-bottom: 40px;
   padding: 53px 44px;
   box-sizing: border-box;
+  transition-property: all;
+  transition-duration: 0.7s;
+  cursor: pointer;
 
   &:not(:last-of-type) {
     margin-right: 30px;
+  }
+
+  &:focus h3,
+  &:hover h3 {
+    color: $special-blue;
+    opacity: 1;
+  }
+
+  &:active h3 {
+    color: $special-blue;
+    opacity: 0.5;
+  }
+
+  &:focus .service__pic,
+  &:hover .service__pic {
+    opacity: 0.3;
+  }
+
+  &:active .service__pic {
+    color: $special-blue;
+    opacity: 0.1;
+  }
+
+  &:focus .service__button,
+  &:hover .service__button {
+    opacity: 0.5;
+  }
+
+  &:active .service__button {
+    color: $special-blue;
+    opacity: 0.3;
   }
 }
 
@@ -79,9 +114,10 @@
 
 .service__item h3 {
   @include heading-style;
+  width: 170px;
+  margin: 0;
   font-size: 20px;
   line-height: 30px;
-  margin: 0;
   color: $basic-white;
 }
 
@@ -94,6 +130,8 @@
   padding: 0;
   border: none;
   background-color: $special-blue;
+  cursor: pointer;
+  outline: none;
 }
 
 .service__button svg {
@@ -142,7 +180,8 @@
   }
 
   .service__wrapper h2 {
-    margin-bottom: 37px;
+    width: 95%;
+    margin: 0 auto 37px;
     font-size: 28px;
     line-height: 39px;
   }

@@ -28,11 +28,11 @@
   color: $basic-white;
 
   &--mail {
-    margin-right: 88px;
+    margin-right: 96px;
   }
 
   &--phone {
-    margin-right: 38px;
+    margin-right: 48px;
   }
 }
 
@@ -40,6 +40,33 @@
   font-size: 16px;
   line-height: 18px;
   color: $basic-white;
+  transition-property: all;
+  transition-duration: 0.7s;
+}
+
+.header__item a {
+  &:focus,
+  &:hover {
+    color: $special-blue;
+    opacity: 1;
+  }
+
+  &:active {
+    color: $special-blue;
+    opacity: 0.5;
+  }
+}
+
+.header__item {
+  &-mail svg {
+    width: 19px;
+    height: 14px;
+  }
+
+  &--phone svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .header__button {
@@ -53,6 +80,7 @@
 
 @media (max-width: $tablet-breakpoint) {
   .header {
+    top: 20px;
     width: 93.5%;
   }
 
@@ -73,20 +101,38 @@
   .header__item span {
     display: none;
   }
+
+  .header__item {
+    &--mail svg {
+      width: 25px;
+      height: 19px;
+    }
+
+    &--phone {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }
 
 @media (max-width: $mobile-breakpoint) {
   .header {
+    top: 10px;
     width: 90%;
   }
 
-  .header__icon {
+  .header__logo {
     &--main {
       display: none;
     }
 
     &--mobile {
       display: block;
+    }
+
+    &--mobile svg {
+      width: 38px;
+      height: 38px;
     }
   }
 
