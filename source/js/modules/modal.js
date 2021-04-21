@@ -79,7 +79,7 @@
   });
 
   body.onclick = function(e) {
-    if (e.target.className === 'modal') {
+    if (e.target.closest('.modal')) {
       e.stopPropagation();
     } else {
       feedbackModal.classList.remove('modal-show');
