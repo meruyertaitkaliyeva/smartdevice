@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  // const body = document.querySelector('*:not(.modal)');
+  const body = document.querySelector('body');
   const feedbackLink = document.querySelector('.header__button');
   const feedbackModal = document.querySelector('.modal');
   const feedbackClose = feedbackModal.querySelector('.modal__button');
@@ -10,7 +10,7 @@
   const feedbackPhone = feedbackModal.querySelector('#modal-phone');
   const feedbackText = feedbackModal.querySelector('#modal-message');
   const feedbackError = feedbackModal.querySelector('.error');
-  const submit = feedbackModal.querySelector('button');
+  const feedbackSubmit = feedbackModal.querySelector('.button');
   let isStorageSupport = true;
   let storageName = '';
   let storagePhone = '';
@@ -26,6 +26,7 @@
   }
 
   feedbackLink.addEventListener('click', function (evt) {
+    evt.stopPropagation();
     evt.preventDefault();
     feedbackModal.classList.remove('hide');
     feedbackModal.classList.add('modal-show');
@@ -48,7 +49,7 @@
   };
   const mask = IMask(feedbackPhone, maskOptions);
 
-  submit.addEventListener('click', function (evt) {
+  feedbackSubmit.addEventListener('click', function (evt) {
     if (feedbackPhone.value.length < 10) {
       evt.preventDefault();
       feedbackError.classList.remove('hide');
@@ -77,11 +78,12 @@
     }
   });
 
-  document.addEventListener('click', function() {
-    if (feedbackModal.classList.contains('modal-show')) {
-      evt.preventDefault();
+  body.onclick = function(e) {
+    if (e.target.className === 'modal') {
+      e.stopPropagation();
+    } else {
       feedbackModal.classList.remove('modal-show');
       feedbackModal.classList.add('hide');
     }
-  });
+  };
 })();

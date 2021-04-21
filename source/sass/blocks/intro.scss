@@ -97,9 +97,7 @@
   opacity: 0.5;
   transition-property: all;
   transition-duration: 0.7s;
-}
 
-.intro__scroll a {
   &:focus,
   &:hover {
     color: $special-blue;
@@ -112,7 +110,7 @@
   }
 }
 
-@media (max-width:$tablet-breakpoint) {
+@media (max-width: $tablet-breakpoint) {
   .intro {
     padding: 84px 0 163px;
     overflow-x: hidden;
@@ -168,7 +166,7 @@
   }
 }
 
-@media (max-width:$mobile-breakpoint) {
+@media (max-width: $mobile-breakpoint) {
   .intro {
     padding: 90px 0 70px;
   }
@@ -205,6 +203,7 @@
     &--dt {
       display: none;
     }
+
     &--mob {
       display: block;
     }

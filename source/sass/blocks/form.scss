@@ -2,15 +2,12 @@
 .message textarea {
   box-sizing: border-box;
   border: none;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   color: $basic-white;
   font-family: $body-font-family;
   font-size: 16px;
   line-height: 21.5px;
-}
 
-.input input,
-.message textarea {
   &::placeholder {
     color: $basic-white;
   }
@@ -39,13 +36,13 @@
 
   &::before {
     position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 16px;
-      height: 16px;
-      border: 1px solid $basic-white;
-      box-sizing: border-box;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $basic-white;
+    box-sizing: border-box;
   }
 }
 

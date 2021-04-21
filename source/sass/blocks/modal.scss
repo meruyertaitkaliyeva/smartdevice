@@ -80,11 +80,10 @@
 
 .modal-show {
   display: block;
-  -webkit-animation: bounce 0.6s;
-          animation: bounce 0.6s;
+  animation: bounce 0.6s;
 }
 
-@-webkit-keyframes bounce {
+@keyframes bounce {
   0% {
     transform: translateY(2000px);
   }
@@ -120,7 +119,7 @@
   }
 }
 
-@-webkit-keyframes shake {
+@keyframes shake {
   0%,
   100% {
     transform: translateX(0);

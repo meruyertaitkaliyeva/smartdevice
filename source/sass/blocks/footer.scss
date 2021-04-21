@@ -33,11 +33,11 @@
 }
 
 .footer__socials-list {
+  @include list-style;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 115px;
-  @include list-style;
 }
 
 .footer__span {
@@ -60,10 +60,10 @@
 
 .footer__nav-list,
 .footer__contacts-list {
+  @include list-style;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  @include list-style;
 }
 
 .footer__nav-list {
@@ -107,9 +107,7 @@
   fill: #cdcdcd;
   transition-property: all;
   transition-duration: 0.7s;
-}
 
-.footer__socials-item svg {
   &:focus,
   &:hover {
     fill: $special-blue;
@@ -140,11 +138,11 @@
 }
 
 .footer__copyright-list {
+  @include list-style;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 74%;
-  @include list-style;
   margin: 0 auto;
 }
 
@@ -155,6 +153,7 @@
   color: $dark-grey;
   opacity: 0.5;
   text-transform: uppercase;
+
   &--rights {
     margin-right: 68px;
   }
@@ -240,6 +239,7 @@
 
   .footer__copyright-item {
     margin: 0;
+
     &--hide {
       display: none;
     }
@@ -298,7 +298,6 @@
     display: none;
   }
 
-  .footer__folder--closed h3,
   .footer__folder--closed h3 {
     margin: 0;
   }
@@ -312,7 +311,6 @@
     display: block;
   }
 
-  .footer__folder--opened h3,
   .footer__folder--opened h3 {
     margin-bottom: 36px;
   }
