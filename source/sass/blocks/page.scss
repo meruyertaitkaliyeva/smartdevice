@@ -15,9 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-@media (max-width: $tablet-breakpoint) {
-  body .header__navigation--opened {
-    height: 100vh;
-    overflow-y: scroll;
-  }
+body .modal {
+  height: 100vh;
 }

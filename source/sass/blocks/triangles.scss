@@ -1,103 +1,47 @@
-.triangles {
-  display: flex;
-  position: relative;
-  width: 705px;
-  height: 515px;
-}
-
-.triangles svg {
-  fill: none;
-}
-
-.triangles__little svg {
-  position: absolute;
-  bottom: 60px;
-  left: 50px;
-  width: 330px;
-  height: 310px;
-}
-
-.triangles__big svg {
-  position: absolute;
-  bottom: 70px;
-  left: 80px;
-  width: 600px;
-  height: 480px;
-}
-
 .background {
   position: relative;
   max-width: 1921px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .background__triangle {
   position: absolute;
 
   &--little svg {
-    width: 340px;
-    height: 330px;
+    width: 261px;
+    height: 229px;
   }
 
   &--big svg {
-    width: 680px;
-    height: 695px;
-  }
-
-  &--little1 {
-    top: 40px;
-    left: 200px;
-  }
-
-  &--big1 {
-    bottom: -30px;
-    left: -70px;
-  }
-
-  &--little2 {
-    top: 388px;
-    right: 27px;
+    width: 905px;
+    height: 870px;
     transform: rotate(180deg);
   }
 
+  &--little1 {
+    top: 57px;
+    left: 182px;
+    transform: rotate(90deg);
+  }
+
+  &--big1 {
+    bottom: -54px;
+    left: -314px;
+  }
+
+  &--little2 {
+    top: 440px;
+    right: 68px;
+    transform: rotate(150deg);
+  }
+
   &--big2 {
-    bottom: 410px;
-    left: 525px;
+    bottom: 240px;
+    left: 540px;
     transform: rotate(180deg);
   }
 }
 
 .background__triangle svg {
   fill: none;
-}
-
-@media (max-width: $tablet-breakpoint) {
-  .triangles__little svg {
-    left: 67px;
-    width: 260px;
-    height: 260px;
-  }
-
-  .triangles__big svg {
-    bottom: 51px;
-    left: 110px;
-    width: 435px;
-    height: 435px;
-  }
-}
-
-@media (max-width: $mobile-breakpoint) {
-  .triangles__little svg {
-    bottom: 110px;
-    left: 160px;
-    width: 265px;
-    height: 216px;
-  }
-
-  .triangles__big svg {
-    bottom: 110px;
-    left: 208px;
-    width: 446px;
-    height: 370px;
-  }
 }

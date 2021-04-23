@@ -16,7 +16,6 @@
   let storagePhone = '';
   let storageMessage = '';
 
-
   try {
     storageName = localStorage.getItem('name');
     storagePhone = localStorage.getItem('phone');
@@ -86,4 +85,10 @@
       feedbackModal.classList.add('hide');
     }
   };
+
+  window.addEventListener('scroll', (e) => {
+    if (feedbackModal.classList.contains('modal-show')) {
+      window.scrollTo(0,0);
+    }
+  });
 })();

@@ -1,10 +1,15 @@
 .advantages {
   display: flex;
   flex-direction: column;
-  max-width: 1170px;
   width: 100%;
   margin: 0 auto;
   padding: 110px 0;
+}
+
+.advantages__wrapper {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .advantages__list {

@@ -1,26 +1,56 @@
 .header {
   display: flex;
-  justify-content: space-between;
   position: absolute;
   top: 33px;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 1411px;
-  width: 73%;
+  left: 0;
+  width: 100%;
   min-height: 52px;
   background-color: transparent;
 }
 
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1411px;
+  width: 73%;
+  margin: 0 auto;
+}
+
 .header__logo {
-  &--mobile {
-    display: none;
-  }
+  display: flex;
+}
+
+.header__logo svg {
+  width: 52px;
+  height: 52px;
+}
+
+.header__logo-text {
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.header__logo-text svg {
+  width: 134px;
+}
+
+.header__text-smart svg {
+  height: 30px;
+}
+
+.header__text-technology svg {
+  height: 15px;
 }
 
 .header__list {
   @include list-style;
   display: flex;
   justify-content: space-between;
+  max-width: 796px;
+  width: 100%;
+  padding-left: 10%;
+  box-sizing: border-box;
+  z-index: 2;
 }
 
 .header__item {
@@ -28,11 +58,13 @@
   color: $basic-white;
 
   &--mail {
-    margin-right: 96px;
+    width: 31%;
+    padding-right: 20px;
   }
 
   &--phone {
-    margin-right: 48px;
+    width: 36%;
+    padding-right: 20px;
   }
 
   &-mail svg {
@@ -43,6 +75,10 @@
   &--phone svg {
     width: 18px;
     height: 18px;
+  }
+
+  & span {
+    margin-left: 9px;
   }
 }
 
@@ -77,10 +113,20 @@
 @media (max-width: $tablet-breakpoint) {
   .header {
     top: 20px;
+  }
+
+  .header__wrapper {
     width: 93.5%;
   }
 
+  .header__list {
+    width: auto;
+    padding: 0;
+  }
+
   .header__item {
+    width: auto;
+    padding: 0;
     &--mail {
       margin-right: 33px;
     }
@@ -112,22 +158,19 @@
 @media (max-width: $mobile-breakpoint) {
   .header {
     top: 10px;
+  }
+
+  .header__wrapper {
     width: 90%;
   }
 
-  .header__logo {
-    &--main {
-      display: none;
-    }
+  .header__logo svg {
+    width: 38px;
+    height: 38px;
+  }
 
-    &--mobile {
-      display: block;
-    }
-
-    &--mobile svg {
-      width: 38px;
-      height: 38px;
-    }
+  .header__logo-text {
+    display: none;
   }
 
   .header__item {

@@ -1,10 +1,14 @@
 .about {
   display: flex;
+  padding: 0 0 90px;
+}
+
+.about__wrapper {
+  display: flex;
   flex-wrap: wrap;
   max-width: 1170px;
-  // width: 69%;
   margin: 0 auto;
-  padding: 0 0 90px;
+  z-index: 1;
 }
 
 .about img {
@@ -13,19 +17,20 @@
   margin-left: -28px;
 }
 
-.about__wrapper {
+.about__folder {
   max-width: 984px;
-  width: 83%;
+  width: 82%;
   margin: 0 0 15px 8px;
   color: $basic-dark;
+  background-color: $basic-white;
 }
 
-.about__wrapper h2 {
+.about__folder h2 {
   @include heading-style;
   margin: 0 0 18px;
 }
 
-.about__wrapper p {
+.about__folder p {
   font-size: 16px;
   line-height: 22.5px;
 }
@@ -41,12 +46,21 @@
   color: $special-blue;
   border: 1px solid $special-blue;
   background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $basic-white;
+    background-color: $special-blue;
+  }
 }
 
 @media (max-width: $tablet-breakpoint) {
   .about {
-    width: 100%;
     padding: 0 0 68px;
+  }
+
+  .about__wrapper {
+    width: 100%;
   }
 
   .about img {
@@ -55,13 +69,14 @@
     margin: 0;
   }
 
-  .about__wrapper {
+  .about__folder {
     max-width: 532px;
     width: 76%;
     margin: 0 0 0 22px;
+    z-index: 2;
   }
 
-  .about__wrapper p {
+  .about__folder p {
     margin: 21px 0 0;
   }
 
@@ -83,7 +98,7 @@
     padding: 0 0 65px;
   }
 
-  .about__wrapper {
+  .about__folder {
     width: 90%;
     margin: 0 auto;
   }
@@ -92,13 +107,13 @@
     display: none;
   }
 
-  .about__wrapper h2 {
+  .about__folder h2 {
     margin: 0 0 21px;
     font-size: 28px;
     line-height: 39px;
   }
 
-  .about__wrapper p:first-of-type {
+  .about__folder p:first-of-type {
     margin-bottom: 40px;
   }
 
