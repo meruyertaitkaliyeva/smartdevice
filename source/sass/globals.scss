@@ -47,3 +47,16 @@ input[type="radio"].visually-hidden {
     opacity: 0.5;
   }
 }
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .wrapper {
+    padding: 0;
+  }
+}

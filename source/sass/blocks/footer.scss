@@ -9,9 +9,8 @@
 }
 
 .footer__wrapper {
-  max-width: 1450px;
+  max-width: 1480px;
   width: 100%;
-  margin: 0 auto;
 }
 
 .footer__folders {
@@ -83,10 +82,6 @@
   margin: 0 75px 0 0;
 }
 
-// .footer__contacts-item {
-//   margin: 0 0 10px;
-// }
-
 .footer__nav-item a,
 .footer__contacts-item,
 .footer__contacts-item a {
@@ -138,6 +133,7 @@
   }
 }
 
+.footer__copyright-item,
 .footer__copyright-item a,
 .footer__span a {
   font-size: 13px;
@@ -146,6 +142,11 @@
   color: $dark-grey;
   opacity: 0.5;
   text-transform: uppercase;
+}
+
+.footer__contacts-item a,
+.footer__copyright-item a {
+  opacity: 1;
 }
 
 .footer__nav-item a,

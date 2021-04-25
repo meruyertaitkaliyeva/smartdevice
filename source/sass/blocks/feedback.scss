@@ -1,7 +1,6 @@
 .feedback {
   display: flex;
   width: 100%;
-  // min-height: 670px;
   padding: 96px 0 110px;
   background-color: $special-blue;
   color: $basic-white;
@@ -13,16 +12,12 @@
   display: flex;
   justify-content: space-between;
   max-width: 1210px;
-  // width: 62%;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .feedback__pic {
   position: relative;
   top: 38px;
   left: -220px;
-  // margin: 38px 0 0 -225px;
   max-width: 655px;
   max-height: 466px;
 }

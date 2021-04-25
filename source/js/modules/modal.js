@@ -41,6 +41,10 @@
       feedbackMessage.value = storageMessage;
       submit.focus();
     }
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+      body.style.position = 'fixed';
+      body.style.width = '100%';
+      body.style.top = `-${scrollY}`;
   });
 
   const maskOptions = {
@@ -65,6 +69,10 @@
     evt.preventDefault();
     feedbackModal.classList.remove('modal-show');
     feedbackModal.classList.add('hide');
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   });
 
   window.addEventListener('keydown', function (evt) {
@@ -75,6 +83,10 @@
         feedbackModal.classList.add('hide');
       }
     }
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   });
 
   body.onclick = function(e) {
@@ -84,11 +96,13 @@
       feedbackModal.classList.remove('modal-show');
       feedbackModal.classList.add('hide');
     }
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   };
 
-  window.addEventListener('scroll', (e) => {
-    if (feedbackModal.classList.contains('modal-show')) {
-      window.scrollTo(0,0);
-    }
+  window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
   });
 })();

@@ -6,8 +6,6 @@
 .about__wrapper {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1170px;
-  margin: 0 auto;
   z-index: 1;
 }
 
@@ -18,8 +16,7 @@
 }
 
 .about__folder {
-  max-width: 984px;
-  width: 82%;
+  width: 81.7%;
   margin: 0 0 15px 8px;
   color: $basic-dark;
   background-color: $basic-white;
@@ -70,8 +67,7 @@
   }
 
   .about__folder {
-    max-width: 532px;
-    width: 76%;
+    width: 70.8%;
     margin: 0 0 0 22px;
     z-index: 2;
   }
