@@ -44,6 +44,15 @@
     border: 1px solid $basic-white;
     box-sizing: border-box;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .checkbox input {

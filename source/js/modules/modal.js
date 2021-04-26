@@ -3,7 +3,8 @@
 (function () {
   const body = document.querySelector('body');
   const feedbackLink = document.querySelector('.header__button');
-  const feedbackModal = document.querySelector('.modal');
+  const modal = document.querySelector('.modal');
+  const feedbackModal = document.querySelector('.modal__overlay');
   const feedbackClose = feedbackModal.querySelector('.modal__button');
   const feedbackForm = feedbackModal.querySelector('form');
   const feedbackName = feedbackModal.querySelector('#modal-name');
@@ -29,6 +30,7 @@
     evt.preventDefault();
     feedbackModal.classList.remove('hide');
     feedbackModal.classList.add('modal-show');
+    modal.classList.add('shade');
     if (storageName) {
       feedbackName.value = storageName;
       feedbackPhone.focus();
@@ -69,6 +71,7 @@
     evt.preventDefault();
     feedbackModal.classList.remove('modal-show');
     feedbackModal.classList.add('hide');
+    modal.classList.remove('shade');
     const scrollY = body.style.top;
     body.style.position = '';
     body.style.top = '';
@@ -81,6 +84,7 @@
         evt.preventDefault();
         feedbackModal.classList.remove('modal-show');
         feedbackModal.classList.add('hide');
+        modal.classList.remove('shade');
       }
     }
     const scrollY = body.style.top;
@@ -90,11 +94,12 @@
   });
 
   body.onclick = function(e) {
-    if (e.target.closest('.modal')) {
+    if (e.target.closest('.modal__window')) {
       e.stopPropagation();
     } else {
       feedbackModal.classList.remove('modal-show');
       feedbackModal.classList.add('hide');
+      modal.classList.remove('shade');
     }
     const scrollY = body.style.top;
     body.style.position = '';

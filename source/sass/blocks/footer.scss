@@ -309,10 +309,6 @@
     }
   }
 
-  .footer__folder h3 {
-    display: none;
-  }
-
   .footer__folder--closed {
     padding: 0;
   }
@@ -322,7 +318,13 @@
     display: none;
   }
 
-  .footer__folder--opened {
+  .footer__folder--closed h3,
+  .footer__folder--opened h3 {
+    display: none;
+  }
+
+  .footer__folder--opened,
+  .footer__no-js {
     padding: 0 0 28px;
   }
 
@@ -379,6 +381,20 @@
     &::after {
       background-image: url("../img/icon-close.svg");
     }
+  }
+
+  .footer__no-js .footer__button {
+    display: none;
+  }
+
+  .footer__no-js h3 {
+    display: block;
+    margin: 28px 0;
+  }
+
+  .footer__no-js .footer__nav-list,
+  .footer__no-js .footer__contacts-list {
+    display: block;
   }
 
   .footer__open,

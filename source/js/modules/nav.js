@@ -7,6 +7,9 @@
   const navButton = navFolder.querySelector('.footer__button--nav');
   const contactsButton = contactsFolder.querySelector('.footer__button--contacts');
 
+  navFolder.classList.remove('footer__no-js');
+  contactsFolder.classList.remove('footer__no-js');
+
   navButton.addEventListener('click', function () {
     if (navFolder.classList.contains('footer__folder--closed')) {
       navFolder.classList.remove('footer__folder--closed');
