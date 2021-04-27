@@ -43,10 +43,10 @@
       feedbackMessage.value = storageMessage;
       submit.focus();
     }
-    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    // const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
       body.style.position = 'fixed';
       body.style.width = '100%';
-      body.style.top = `-${scrollY}`;
+      // body.style.top = `-${scrollY}`;
   });
 
   const maskOptions = {
@@ -72,10 +72,10 @@
     feedbackModal.classList.remove('modal-show');
     feedbackModal.classList.add('hide');
     modal.classList.remove('shade');
-    const scrollY = body.style.top;
+    // const scrollY = body.style.top;
     body.style.position = '';
-    body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    // body.style.top = '';
+    // window.scrollTo(0, parseInt(scrollY || '0') * -1);
   });
 
   window.addEventListener('keydown', function (evt) {
@@ -87,10 +87,10 @@
         modal.classList.remove('shade');
       }
     }
-    const scrollY = body.style.top;
+    // const scrollY = body.style.top;
     body.style.position = '';
-    body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    // body.style.top = '';
+    // window.scrollTo(0, parseInt(scrollY || '0') * -1);
   });
 
   body.onclick = function(e) {
@@ -101,13 +101,13 @@
       feedbackModal.classList.add('hide');
       modal.classList.remove('shade');
     }
-    const scrollY = body.style.top;
+    // const scrollY = body.style.top;
     body.style.position = '';
-    body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    // body.style.top = '';
+    // window.scrollTo(0, parseInt(scrollY || '0') * -1);
   };
 
-  window.addEventListener('scroll', () => {
-    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-  });
+  // window.addEventListener('scroll', () => {
+  //   document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+  // });
 })();
