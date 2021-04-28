@@ -25,7 +25,7 @@
     isStorageSupport = false;
   }
 
-  feedbackModal.classList.remove('modal__no-js');
+  // feedbackModal.classList.remove('modal__no-js');
 
   feedbackLink.addEventListener('click', function (evt) {
     evt.stopPropagation();

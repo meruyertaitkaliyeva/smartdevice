@@ -9,18 +9,20 @@
     item.classList.remove('footer__no-js');
   });
 
+  function hideAll() {
+    button.forEach(function (acc) {
+      acc.classList.remove('active');
+      acc.nextElementSibling.classList.remove('show');
+    });
+  }
+
   button.forEach(function (acc) {
     acc.addEventListener('click', function () {
-      hideAll();
+      if (acc != this) {
+        hideAll();
+      }
       this.classList.toggle('active');
       this.nextElementSibling.classList.toggle('show');
     })
   });
-
-  function hideAll() {
-    button.forEach(function (acc) {
-      acc.classList.toggle('active', false);
-      acc.nextElementSibling.classList.toggle('show', false);
-    });
-  }
 })();
