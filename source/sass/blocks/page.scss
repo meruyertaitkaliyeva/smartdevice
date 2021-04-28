@@ -23,3 +23,8 @@ body .modal-show {
   height: 100vh;
   overflow-y: scroll;
 }
+
+.fixed {
+  position: fixed;
+  overflow-y: hidden;
+}

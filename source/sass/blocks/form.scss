@@ -7,6 +7,7 @@
   font-family: $body-font-family;
   font-size: 16px;
   line-height: 21.5px;
+  border-radius: 0;
 
   &::placeholder {
     color: $basic-white;
@@ -14,10 +15,14 @@
 
   &:focus,
   &:active {
-    outline-color: $basic-white;
+    outline: none;
     background-color: $basic-white;
     color: $basic-dark;
   }
+}
+
+.message textarea  {
+  resize: none;
 }
 
 .submit {

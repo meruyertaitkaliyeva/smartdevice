@@ -25,12 +25,15 @@
     isStorageSupport = false;
   }
 
+  feedbackModal.classList.remove('modal__no-js');
+
   feedbackLink.addEventListener('click', function (evt) {
     evt.stopPropagation();
     evt.preventDefault();
-    feedbackModal.classList.remove('hide');
+    // feedbackModal.classList.remove('hide');
     feedbackModal.classList.add('modal-show');
     modal.classList.add('shade');
+    feedbackName.focus();
     if (storageName) {
       feedbackName.value = storageName;
       feedbackPhone.focus();
@@ -43,10 +46,8 @@
       feedbackMessage.value = storageMessage;
       submit.focus();
     }
-    // const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-      body.style.position = 'fixed';
-      body.style.width = '100%';
-      // body.style.top = `-${scrollY}`;
+    body.classList.add('fixed');
+    body.style.width = '100%';
   });
 
   const maskOptions = {
@@ -69,13 +70,12 @@
 
   feedbackClose.addEventListener('click', function (evt) {
     evt.preventDefault();
-    feedbackModal.classList.remove('modal-show');
-    feedbackModal.classList.add('hide');
-    modal.classList.remove('shade');
-    // const scrollY = body.style.top;
-    body.style.position = '';
-    // body.style.top = '';
-    // window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    if (feedbackModal.classList.contains('modal-show')) {
+      feedbackModal.classList.remove('modal-show');
+      // feedbackModal.classList.add('hide');
+      modal.classList.remove('shade');
+      body.classList.remove('fixed');
+    }
   });
 
   window.addEventListener('keydown', function (evt) {
@@ -83,31 +83,21 @@
       if (feedbackModal.classList.contains('modal-show')) {
         evt.preventDefault();
         feedbackModal.classList.remove('modal-show');
-        feedbackModal.classList.add('hide');
+        // feedbackModal.classList.add('hide');
         modal.classList.remove('shade');
+        body.classList.remove('fixed');
       }
     }
-    // const scrollY = body.style.top;
-    body.style.position = '';
-    // body.style.top = '';
-    // window.scrollTo(0, parseInt(scrollY || '0') * -1);
   });
 
-  body.onclick = function(e) {
+  body.onclick = function (e) {
     if (e.target.closest('.modal__window')) {
       e.stopPropagation();
-    } else {
+    } else if (feedbackModal.classList.contains('modal-show')) {
       feedbackModal.classList.remove('modal-show');
-      feedbackModal.classList.add('hide');
+      // feedbackModal.classList.add('hide');
       modal.classList.remove('shade');
+      body.classList.remove('fixed');
     }
-    // const scrollY = body.style.top;
-    body.style.position = '';
-    // body.style.top = '';
-    // window.scrollTo(0, parseInt(scrollY || '0') * -1);
   };
-
-  // window.addEventListener('scroll', () => {
-  //   document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-  // });
 })();

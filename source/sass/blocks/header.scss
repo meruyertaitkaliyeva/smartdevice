@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   max-width: 1451px;
-  width: 76%;
+  width: 100%;
 }
 
 .header__logo {
@@ -45,8 +45,11 @@
   @include list-style;
   display: flex;
   justify-content: space-between;
-  max-width: 796px;
+  flex-wrap: wrap;
+  // flex-grow: 1;
+  max-width: 800px;
   width: 100%;
+  margin-top: 4px;
   padding-left: 10%;
   box-sizing: border-box;
   z-index: 2;
@@ -55,16 +58,15 @@
 .header__item {
   align-self: center;
   color: $basic-white;
+  padding-bottom: 10px;
 
-  &--mail {
-    width: 31%;
-    padding-right: 20px;
+  &:not(:last-of-type) {
+    margin-right: 35px;
   }
 
-  &--phone {
-    width: 36%;
-    padding-right: 20px;
-  }
+  // &--phone {
+  //   margin-right: 15px;
+  // }
 
   &-mail svg {
     width: 19px;
@@ -100,9 +102,10 @@
   }
 }
 
-.header__button {
-  width: 180px;
-  height: 45px;
+.header__item--button a {
+  // width: 180px;
+  // height: 45px;
+  padding: 13px 37px 13px 29px;
   border: 1px solid $basic-white;
   font-size: 14px;
   line-height: 16px;
@@ -120,6 +123,7 @@
 
   .header__list {
     width: auto;
+    margin: 0;
     padding: 0;
   }
 
@@ -127,13 +131,13 @@
     width: auto;
     padding: 0;
 
-    &--mail {
+    &:not(:last-of-type) {
       margin-right: 33px;
     }
 
-    &--phone {
-      margin-right: 0;
-    }
+    // &--phone {
+    //   margin-right: 0;
+    // }
 
     &--button {
       display: none;
@@ -174,7 +178,7 @@
   }
 
   .header__item {
-    &--mail {
+    &:not(:last-of-type) {
       margin-right: 23px;
     }
   }

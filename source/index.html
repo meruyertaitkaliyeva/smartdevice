@@ -15,43 +15,45 @@
   <header id="contacts" class="header">
     <div class="header__wrapper wrapper">
       <div class="header__logo">
-        <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <use xlink:href="img/sprite.svg#icon-logo"></use>
-        </svg>
-        <div class="header__logo-text">
-          <div class="header__text-smart">
-            <svg width="133" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#icon-smart-device"></use>
-            </svg>
-          </div>
-          <div class="header__text-technology">
-            <svg width="105" height="10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#icon-technology"></use>
-            </svg>
-          </div>
-        </div>
+        <a>
+          <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#icon-logo"></use>
+          </svg>
+          <div class="header__logo-text">
+            <div class="header__text-smart">
+              <svg width="133" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#icon-smart-device"></use>
+              </svg>
+            </div>
+            <div class="header__text-technology">
+              <svg width="105" height="10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#icon-technology"></use>
+              </svg>
+            </div>
+        </a>
       </div>
-      <ul class="header__list">
-        <li class="header__item header__item--mail">
-          <a href="mailto:info@sd.ru">
-            <svg width="19" height="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#icon-mail"></use>
-            </svg>
-            <span>info@sd.ru</span>
-          </a>
-        </li>
-        <li class="header__item header__item--phone">
-          <a href="tel:+74950005252">
-            <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#icon-phone"></use>
-            </svg>
-            <span>+7 (495) 000 52 52</span>
-          </a>
-        </li>
-        <li class="header__item header__item--button">
-          <button class="header__button button" type="button">Заказать звонок</button>
-        </li>
-      </ul>
+    </div>
+    <ul class="header__list">
+      <li class="header__item header__item--mail">
+        <a href="mailto:info@sd.ru">
+          <svg width="19" height="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#icon-mail"></use>
+          </svg>
+          <span>info@sd.ru</span>
+        </a>
+      </li>
+      <li class="header__item header__item--phone">
+        <a href="tel:+74950005252">
+          <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#icon-phone"></use>
+          </svg>
+          <span>+7 (495) 000 52 52</span>
+        </a>
+      </li>
+      <li class="header__item header__item--button">
+        <a href="#modal" target="_blank" class="header__button button" type="button">Заказать звонок</a>
+      </li>
+    </ul>
     </div>
   </header>
   <main class="main">
@@ -169,7 +171,7 @@
     </div>
     <section id="service" class="main__service service">
       <div class="service__wrapper wrapper">
-        <h2>Service Device предлагает следующие товары и услуги</h2>
+        <h2>Service Device предлагает следующие товары и&nbsp;услуги</h2>
         <ul class="service__list">
           <li class="service__item service__item--production">
             <a href="#">
@@ -243,21 +245,21 @@
           <form method="get">
             <div class="feedback__input feedback__input--name input">
               <label for="name"></label>
-              <input type="text" name="name" id="name" placeholder="Имя" required>
+              <input type="text" name="name" id="name" placeholder="Имя" tabindex="0" required>
             </div>
             <div class="feedback__input feedback__input--phone input">
               <div class="feedback__error error hide">Вы неверное ввели номер</div>
               <label for="tel"></label>
-              <input type="tel" name="tel" id="tel" placeholder="Телефон" required>
+              <input type="tel" name="tel" id="tel" placeholder="Телефон" tabindex="0" required>
             </div>
             <div class="feedback__message message">
-              <textarea name="message" id="message" placeholder="Ваш вопрос" required></textarea>
+              <textarea name="message" id="message" placeholder="Ваш вопрос" tabindex="0"></textarea>
             </div>
-            <button class="feedback__submit button submit" type="submit">Задать вопрос</button>
             <div class="feedback__checkbox checkbox">
               <input class="visually-hidden" type="checkbox" name="consent" id="consent" required>
-              <label for="consent">Я согласен на обработку персональных данных</label>
+              <label for="consent" tabindex="0">Я согласен на обработку персональных данных</label>
             </div>
+            <button class="feedback__submit button submit" type="submit" tabindex="0">Задать вопрос</button>
           </form>
         </div>
       </div>
@@ -268,9 +270,11 @@
       <div class="footer__folders">
         <div class="footer__folder footer__folder--logo">
           <div class="footer__logo">
-            <svg width="216" height="52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#icon-footer-logo"></use>
-            </svg>
+            <a>
+              <svg width="216" height="52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#icon-footer-logo"></use>
+              </svg>
+            </a>
           </div>
           <div class="footer__span">
             <a href="#">1999-2018 SD Service Devices</a>
@@ -299,40 +303,63 @@
             </li>
           </ul>
         </div>
-        <div class="footer__folder footer__folder--nav footer__folder--closed footer__no-js">
+        <div class="footer__folder footer__folder--nav footer__no-js">
           <h3>Разделы сайта</h3>
           <button class="footer__button footer__button--nav">Разделы сайта</button>
-          <nav class="footer__nav">
-            <ul class="footer__nav-list">
-              <li class="footer__nav-item">
-                <a class="ancor-link" href="#about">О компании</a>
-              </li>
-              <li class="footer__nav-item">
-                <a class="ancor-link" href="#service">Продукты</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="#">Производство печатных плат</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="#">Монтаж печатных плат</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="#">Комплектующие</a>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="ancor-link" href="#about">О компании</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="ancor-link" href="#service">Продукты</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#">Производство печатных плат</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#">Монтаж печатных плат</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#">Комплектующие</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#">Доставка</a>
+            </li>
+            <!-- <li class="footer__nav-item">
+                <a href="#">Доставка</a>
               </li>
               <li class="footer__nav-item">
                 <a href="#">Доставка</a>
               </li>
               <li class="footer__nav-item">
-                <a class="ancor-link" href="#contacts">Контакты</a>
+                <a href="#">Доставка</a>
               </li>
-            </ul>
-          </nav>
+              <li class="footer__nav-item">
+                <a href="#">Доставка</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Доставка</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Доставка</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Доставка</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">Доставка</a> -->
+            </li>
+            <li class="footer__nav-item">
+              <a class="ancor-link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
         </div>
-        <div class="footer__folder footer__folder--contacts footer__folder--closed footer__no-js">
+        <div class="footer__folder footer__folder--contacts footer__no-js">
           <h3>Наш офис</h3>
-          <div class="footer__buttons">
-            <button class="footer__button footer__button--contacts">Наш офис</button>
-          </div>
+          <button class="footer__button footer__button--contacts">Наш офис</button>
           <ul class="footer__contacts-list">
             <li class="footer__contacts-item">
               г. Мытищи, Олимпийский проспект, д. 10
@@ -363,14 +390,9 @@
       </ul>
     </div>
   </footer>
-  <section class="modal ">
-    <div class="modal__overlay hide">
+  <section id="modal" class="modal">
+    <div class="modal__overlay modal__no-js">
       <div class="modal__window">
-        <button class="modal__button" type="button">
-          <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-            <use xlink:href="img/sprite.svg#icon-cross"></use>
-          </svg>
-        </button>
         <div class="modal__wrapper">
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
@@ -387,12 +409,17 @@
             <div class="modal__message message">
               <textarea name="modal-message" id="modal-message" placeholder="Ваш вопрос" required></textarea>
             </div>
-            <button class="modal__submit button submit" type="submit">Отправить</button>
             <div class="modal__check checkbox">
               <input class="visually-hidden" type="checkbox" name="modal-checkbox" id="modal-checkbox" required>
-              <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
+              <label for="modal-checkbox" tabindex="0">Я согласен на обработку персональных данных</label>
             </div>
+            <button class="modal__submit button submit" type="submit">Отправить</button>
           </form>
+          <button class="modal__button" type="button">
+            <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#icon-cross"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </div>

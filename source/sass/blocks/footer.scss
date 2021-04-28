@@ -46,6 +46,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 115px;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
 }
 
 .footer__span {
@@ -169,13 +173,15 @@
   fill: #cdcdcd;
   transition-property: all;
   transition-duration: 0.7s;
+}
 
-  &:focus,
-  &:hover {
+.footer__socials-item {
+  &:focus svg,
+  &:hover svg {
     fill: $special-blue;
   }
 
-  &:active {
+  &:active svg {
     fill: $special-blue;
     opacity: 0.5;
   }
@@ -295,6 +301,8 @@
     }
 
     &--nav {
+      padding: 0;
+
       &::after {
         position: absolute;
         content: "";
@@ -307,30 +315,21 @@
         opacity: 0.2;
       }
     }
+
+    &--contacts {
+      padding: 0;
+    }
   }
 
-  .footer__folder--closed {
-    padding: 0;
-  }
-
-  .footer__folder--closed .footer__nav-list,
-  .footer__folder--closed .footer__contacts-list {
+  .footer__nav-list,
+  .footer__contacts-list {
     display: none;
-  }
-
-  .footer__folder--closed h3,
-  .footer__folder--opened h3 {
-    display: none;
-  }
-
-  .footer__folder--opened,
-  .footer__no-js {
     padding: 0 0 28px;
   }
 
-  .footer__folder--opened .footer__nav-list,
-  .footer__folder--opened .footer__contacts-list {
-    display: block;
+  .footer__folder h3,
+  .footer__folder h3 {
+    display: none;
   }
 
   .footer__logo {
