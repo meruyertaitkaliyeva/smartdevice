@@ -64,7 +64,7 @@
 .header__list {
   @include list-style;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
   margin-right: 50px;
   // flex-grow: 1;
@@ -75,8 +75,8 @@
   color: $basic-white;
   padding-bottom: 10px;
 
-  &:not(:last-of-type) {
-    margin-right: 85px;
+  &:not(:first-of-type) {
+    margin-left: 85px;
   }
 
   // &--phone {
