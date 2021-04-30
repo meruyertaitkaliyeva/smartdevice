@@ -1,7 +1,7 @@
 .feedback {
   display: flex;
   width: 100%;
-  padding: 96px 0 110px;
+  padding: 96px 0 82px;
   background-color: $special-blue;
   color: $basic-white;
   box-sizing: border-box;
@@ -16,16 +16,19 @@
 
 .feedback__pic {
   position: relative;
-  top: 38px;
-  left: -220px;
-  max-width: 655px;
-  max-height: 466px;
+  // top: 38px;
+  // left: -180px;
+  width: 760px;
+  height: 500px;
+  margin-top: -7px;
+  margin-left: -180px;
+  overflow: hidden;
 }
 
 .feedback__pic img {
   position: absolute;
-  top: 25px;
-  left: 195px;
+  top: 70px;
+  left: 150px;
   max-width: 511px;
   max-height: 288px;
   width: 100%;
@@ -35,14 +38,14 @@
 .feedback__triangles {
   display: flex;
   position: relative;
-  width: 705px;
+  width: 725px;
   height: 515px;
 }
 
 .feedback__triangles svg {
   position: absolute;
-  top: -310px;
-  right: -200px;
+  top: -265px;
+  right: -145px;
   width: 1920px;
   height: 881px;
   fill: none;
@@ -50,13 +53,13 @@
 
 .feedback__folder {
   max-width: 570px;
-  margin-left: -60px;
+  margin-left: 20px;
 }
 
 .feedback__folder form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
   width: 100%;
 }
 
@@ -76,7 +79,7 @@
   margin-bottom: 40px;
 
   &--name {
-    margin-right: 10px;
+    margin-right: 29px;
   }
 }
 
@@ -139,6 +142,7 @@
   }
 
   .feedback__folder form {
+    justify-content: space-between;
     max-width: auto;
   }
 

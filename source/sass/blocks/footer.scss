@@ -43,13 +43,9 @@
 .footer__socials-list {
   @include list-style;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   flex-wrap: wrap;
   width: 115px;
-
-  &:not(:last-child) {
-    margin-right: 15px;
-  }
 }
 
 .footer__span {
@@ -177,6 +173,11 @@
 }
 
 .footer__socials-item {
+  &:nth-of-type(3n+1),
+  &:nth-of-type(3n+2) {
+    margin-right: 15.5px;
+  }
+
   &:focus svg,
   &:hover svg {
     fill: $special-blue;

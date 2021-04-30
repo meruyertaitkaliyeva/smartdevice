@@ -117,4 +117,11 @@
 
 .modal__no-js {
   display: block;
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-color: $dark-grey;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-x2.png");
+  }
 }

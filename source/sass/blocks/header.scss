@@ -6,6 +6,7 @@
   width: 100%;
   min-height: 52px;
   background-color: transparent;
+  z-index: 4;
 }
 
 .header__wrapper {
@@ -15,8 +16,17 @@
   width: 100%;
 }
 
-.header__logo {
+.header__logo a {
   display: flex;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.7;
+  }
+
+  &[href]:active {
+    opacity: 0.5;
+  }
 }
 
 .header__logo svg {
@@ -41,18 +51,23 @@
   height: 15px;
 }
 
+.header__folder {
+  display: flex;
+  // max-width: 800px;
+  // width: 100%;
+  margin-top: 4px;
+  padding-left: 10%;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
 .header__list {
   @include list-style;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-right: 50px;
   // flex-grow: 1;
-  max-width: 800px;
-  width: 100%;
-  margin-top: 4px;
-  padding-left: 10%;
-  box-sizing: border-box;
-  z-index: 2;
 }
 
 .header__item {
@@ -61,7 +76,7 @@
   padding-bottom: 10px;
 
   &:not(:last-of-type) {
-    margin-right: 35px;
+    margin-right: 85px;
   }
 
   // &--phone {
@@ -83,7 +98,13 @@
   }
 }
 
-.header__item a {
+.header__button {
+  align-self: center;
+  white-space: nowrap;
+}
+
+.header__item a,
+.header__button a {
   font-size: 16px;
   line-height: 18px;
   color: $basic-white;
@@ -102,7 +123,7 @@
   }
 }
 
-.header__item--button a {
+.header__button a {
   // width: 180px;
   // height: 45px;
   padding: 13px 37px 13px 29px;
@@ -139,10 +160,6 @@
     //   margin-right: 0;
     // }
 
-    &--button {
-      display: none;
-    }
-
     &--mail svg {
       width: 25px;
       height: 19px;
@@ -155,6 +172,10 @@
   }
 
   .header__item span {
+    display: none;
+  }
+
+  .header__button {
     display: none;
   }
 }
