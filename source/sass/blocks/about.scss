@@ -16,7 +16,8 @@
 }
 
 .about__folder {
-  width: 81.7%;
+  // width: 81.7%;
+  width: calc(100% - 190px);
   margin: 0 0 15px 8px;
   color: $basic-dark;
   background-color: $basic-white;
@@ -67,7 +68,8 @@
   }
 
   .about__folder {
-    width: 70.8%;
+    // width: 70.8%;
+    width: calc(100% - 212px);
     margin: 0 0 0 22px;
     z-index: 2;
   }
